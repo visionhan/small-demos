@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="./bootstrap/js/jq.js">
+			
+		</script>
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			#wrap{
+				width: 1000px;
+				height: 400px;
+				margin: 20px auto;
+			}
+			.d1{
+				width: 300px;
+				height: 400px;
+				margin:100px auto;
+				position: relative;
+				top: 0px;
+				right: 0px;
+				transition: all .5s;
+				background-color: indianred;
+				display: inline-block;
+			}
+			.d1:nth-child(1){
+				background: url(img/微信图片_20190117173946.jpg);
+				background-size: 100% 100%;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.d1:nth-child(3){
+				background: url(img/微信图片_20190117173949.jpg);
+				background-size: 100% 100%;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+		
+			.d1:nth-child(2){
+				background: url(img/微信图片_20190117173126.jpg);
+				background-size: 100% 100%;
+				background-position: center;
+				background-repeat: no-repeat;
+				z-index: 10;
+			}
+			.lbt{
+				width: 900px;
+				height: 400px;
+				position: relative;
+				margin: 110px auto;
+				
+			}
+			.d2{
+				width: 900px;
+				height: 400px;
+				position: absolute;
+				top: 0px;
+				opacity: 0;
+			}
+			.bgu-1{
+				background: url(img/微信图片_20190117173131.jpg);
+				background-size:  100%  auto ;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.bgu-2{
+				background: url(img/微信图片_20190117173135.jpg);
+				background-size:  100%  auto ;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.bgu-3{
+				background: url(img/微信图片_20190117173140.jpg);
+				background-size:  100% auto;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.bgu-4{
+				background: url(img/微信图片_20190117173144.jpg);
+				background-size:   100% auto;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.bgu-5{
+				background: url(img/微信图片_20190117173149.jpg);
+				background-size:  100% auto;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.btn{
+				width: 40px;
+				height: 80px;
+				opacity: 0.5;
+				background-color: #FFFFFF;
+				border: 0px;
+				z-index: 1000;
+				color: lightcoral;
+				font-size: 40px;
+			}
+			.leftb{
+				position: absolute;
+				left: 0px;
+				top: 160px;
+			}
+			.rightb{
+				position: absolute;
+				right: 0px;
+				top: 160px;
+			}
+			.d2.active{
+				z-index: 100;
+				opacity: 1;
+			}
+			.point-list{
+				position: absolute;
+				right: 15px;
+				bottom: 5px;
+				width: 100px;
+				height: 20px;
+				z-index: 10000;
+				
+			}
+			.point{
+				width: 15px;
+				height: 15px;
+				border-radius: 100%;
+				background-color: #FFFFFF;
+				opacity: 0.5;
+				display: inline-block;
+
+			}
+			.point.poactive{
+				background-color: lightcoral;
+			}
+			.return{
+				height: 30px;
+				width: 60px;
+				border-radius: 5px;
+				background-color: red;
+				color: #FFFFFF;
+				font-size: 16px;
+				position: fixed;
+				text-align: center;
+				line-height: 30px;
+				top: 2px;
+				left: 5px;
+			}
+			.return a{
+				text-decoration: none;
+				color: aliceblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="return"> <a href="./demoall.html"><返回</a></div>
+			<div class="lbt">
+					<button class="leftb btn"><</button>
+					<button class="rightb btn">></button>
+					<div class="d2 bgu-1 active">
+						
+					</div>
+					<div class="d2 bgu-2">
+						
+					</div>
+					<div class="d2 bgu-3">
+						
+					</div>
+					<div class="d2 bgu-4">
+						
+					</div>
+					<div class="d2 bgu-5">
+						
+					</div>
+					<div class="point-list">
+						<div class="point poactive" data-type = "0"></div>
+						<div class="point" data-type = "1"></div>
+						<div class="point" data-type = "2" ></div>
+						<div class="point"  data-type = "3"></div>
+						<div class="point" data-type = "4"></div>
+						
+					</div>
+				</div>
+		
+		<div id="wrap">
+			
+	
+		<div class="d1" >
+			
+		</div>
+		<div class="d1">
+			
+		</div>
+		<div class="d1">
+			
+		</div>
+			</div>
+			
+		<script type="text/javascript">
+			var page = 0
+			var change = function(){
+				$(".d2").removeClass('active')
+				$(".d2").eq(page).addClass('active')
+				$(".point").removeClass('poactive')
+				$(".point").eq(page).addClass("poactive")
+			}
+			$(".d1").eq(1).on("mouseenter",function(){
+				$(this).css("top","-20px").css("box-shadow","0px 8px 8px 0px salmon")
+				$(".d1").eq(0).css("right","-90px")
+				$(".d1").eq(2).css("right","90px")
+			})
+			$(".d1").eq(1).on("mouseleave",function(){
+				$(this).css("top","0px").css("box-shadow","none")
+				$(".d1").eq(0).css("right","0px")
+				$(".d1").eq(2).css("right","0px")
+			})
+			$(".leftb").on("click",function(){
+				
+				if(page==0){
+					page=4
+				}else{
+					page--
+				}
+			  change()
+			})
+				$(".rightb").on("click",function(){
+				
+				if(page==4){
+					page=0
+				}else{
+					page++
+				}
+			  change()
+			})
+				$('.point').on("click",function(){
+					page=parseInt($(this).attr("data-type"))
+					console.log('daole')
+					change()
+				})
+		</script>
+	</body>
+</html>

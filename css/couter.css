@@ -1,0 +1,53 @@
+#main{
+    position: absolute;
+    left: 150px;
+}
+#display{
+   
+    width: 300px;
+    height: 100px;
+    background-color:darkgray ;
+    border: solid 2px #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.table{
+    width: 300px;
+    /* height: 400px; */
+    text-align: center;
+    font-size: 30px;
+    border: solid rgb(215,215,215) 1px;
+}
+.table .btn1{
+    border:solid #FFFFFF 1px; 
+}
+#display .line{
+    height: 40px;
+    line-height: 50px;
+    text-align: right;
+    font-size: 25px;
+    padding-right: 10px;
+    
+    letter-spacing: 3px;
+    /*调节字间距*/
+}
+#display  .result{
+    height: 60px;
+    line-height: 60px;
+    text-align: right;
+    font-size: 40px;
+    padding-right: 10px;
+}
+.table .num{
+    background-color: rgb(224,224,224);
+}
+.table .step{
+    background-color: rgb(245,146,51);
+    color: white;
+}
+.table .other{
+    background-color: rgb(214,214,214);
+}
+.table .other:active,.table .num:active{
+    background-color: rgb(200,200,200);
+}

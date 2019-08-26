@@ -1,0 +1,41 @@
+
+#music{
+    height: 638px;
+    width: 638px;
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(rgb(104,84,153)), to(rgb(55,48,97)));
+    overflow: hidden;
+    
+}
+.box1{
+    height: 80px;
+    width: 80px;
+    animation: zhuan 3s linear infinite;
+    margin: 400px auto;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    border: 5px double #CF6971;
+    border-radius: 100%;
+}
+/*用作旋转*/
+.yin{
+    height: 60px;
+    width: 60px;
+    background: url(img/音符1_看图王.png);
+    background-size: 100% 100%;
+    z-index: 10px;
+}
+@keyframes zhuan{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+#music span{
+    
+    display: inline-block;
+    position: absolute;
+}

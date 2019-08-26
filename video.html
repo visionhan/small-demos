@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html{
+            margin-left: 100px;
+        }
+       #inall{
+           width: 1000px;
+           height: 5px;
+           background-color:gray;
+
+       }
+       #progress{
+            width: 0px;
+            height: 5px;
+            background-color: red;
+            position: relative;
+       }
+       .control{
+           width: 15px;
+           height: 15px;
+           background-image: url(./tian.svg);
+           background-size: 100% 100% ;
+           background-repeat: no-repeat;
+           position: absolute;
+           right: -12px;
+           top: -5px
+       }
+     
+       .danmu{
+           position: absolute;
+           top: 532.5px ;
+       }
+       #input{
+           width: 400px;
+            height: 30px;
+            border-radius: 3px;
+            background-color: black;
+            opacity: .7;
+            border: solid 1px gray ;
+            outline: none;
+            color: white;
+           }
+        #btn{
+            width: 50px;
+            height: 30px;
+            box-sizing: content-box;
+            background-color: black;
+            color: white;
+            opacity: .3;
+            border:solid 1px;
+
+                }
+        #btn:hover{
+            opacity: .7;
+            
+
+        }
+        #input:hover{
+            background-color: white;
+            color: black;
+        }
+        .list{
+            position: absolute;
+            top: 7px;
+            width: 1000px;
+            height: 150px;
+
+        }
+        .tip{
+            position: absolute;
+            left: 100%;
+           
+           transition:all linear 4s;
+
+            color: aqua;
+           white-space: nowrap;
+        }
+        .active{
+            transform: translateX(-1100px)
+        }
+        .return{
+				height: 30px;
+				width: 60px;
+				border-radius: 5px;
+				background-color: palevioletred;
+				color: #FFFFFF;
+				font-size: 16px;
+				position: fixed;
+				text-align: center;
+				line-height: 30px;
+				top: 2px;
+				left: 5px;
+			}
+			.return a{
+				text-decoration: none;
+				color: aliceblue;
+			}
+      
+    </style>
+</head>
+<body>
+		<div class="return"> <a href="./demoall.html"><返回</a></div>
+     <div class="wrap">
+
+            <video id="video" src="./IU,G-Dragon - 팔레트(Palette).mp4"  width="1000px">
+            </video>
+            <!-- 时间展示 -->
+            <div class="danmu">
+                
+                    <input id="input" type="text" placeholder="发上两句弹幕吧~~">
+               <button id="btn">发送</button>
+            </div>
+            <div class="time-display">
+                <span id="current"></span>/ <span id="duration"></span>
+            </div>
+           
+            <!-- 进度条 -->
+            <div id="inall">
+                <div id="progress"><div class="control"></div></div>
+               
+            </div>
+            
+           <!-- 弹幕 -->
+           <div class="list">
+               <span class="tip"></span>
+           </div>
+     </div>
+    
+
+    <script src="./new.js"></script>
+</body>
+</html>
