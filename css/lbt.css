@@ -1,0 +1,78 @@
+.trap1{
+    width: 800px;
+    height: 360px;
+    position: relative;
+}
+.lbtul {
+    width: 800px;
+    height: 360px;
+    list-style: none;
+    padding: 0;
+}
+
+.list5 {
+    width: 800px;
+    height: 360px;
+    text-align: center;
+    font-size: 150px;
+    line-height: 360px;
+    position: absolute;
+    top: 10px;
+    opacity: 0;
+    transition: all .5s;
+    display: inline-block;
+}
+
+.list5.qian {
+    z-index: 10;
+
+    opacity: 1;
+}
+
+.btn5{
+    z-index: 1000000;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    height: 60px;
+    width: 30px;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+    background-color: black;
+    opacity: 0.2;
+    border: solid 1px lightblue;
+    outline: none;
+    color: white;
+}
+.btn5.active{
+    background-color: black;
+    opacity: 0.5;
+}
+#xqian{
+    left: 0px;
+}
+#xhou{right: 0px;
+    
+}
+.point{
+    float: left;
+    height: 10px;
+    width: 10px;
+    
+    border-radius: 100%;
+    background-color: gainsboro;
+    margin-left: 5px;
+    
+}
+.point.active{
+    background-color: gray;
+}
+.point_list5{
+    z-index: 1000000000;
+    width: 150px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}

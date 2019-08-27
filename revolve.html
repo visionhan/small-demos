@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+				width: 100%;
+			
+				display: flex;
+				align-items: center;
+				background-color:#f2f2f2;
+			}
+			
+			.position {
+				width: 200px;
+				height: 270px;
+				margin: 0px auto;
+				margin-top: 80px;
+				position: relative;
+					perspective: 2000px;
+				perspective-origin: 650px -800px;
+				animation:3s vision alternate linear infinite 4s;
+			}
+			@keyframes vision{
+				from{
+					perspective-origin: 650px -800px;
+					
+				}
+				to{
+					perspective-origin: 650px 270px;
+					
+				}
+			}
+			
+			.box7 {
+				transform-style: preserve-3d;
+				width: 200px;
+				height: 270px;
+				animation: 6s linear revolve infinite 4s;
+			}
+			@keyframes revolve{
+				from{
+
+					transform: rotateY(0deg);
+				}
+				to{
+
+					transform: rotateY(-360deg);
+					
+				}
+			}
+			
+			.img {
+				width: 200px;
+				height: 270px;
+				box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+				background-color: transparent;
+				position: absolute;
+				border-radius: 8px;
+				padding: 10px;
+				box-sizing: border-box7;
+			}
+			
+			.img:nth-child(1) {
+				top: 0px;
+				animation: 0.5s revolve8 linear forwards 3.5s;
+			}
+			
+			@keyframes revolve8 {
+				100% {
+					transform: translateZ(300px);
+				}
+			}
+			
+			.img:nth-child(2) {
+				top: 3px;
+				animation: 1s revolve7 linear forwards 3s;
+			}
+			
+			@keyframes revolve7 {
+				100% {
+					transform: translateX(-212.1px) translateZ(212.1px) rotateY(-45deg);
+				}
+			}
+			
+			.img:nth-child(3) {
+				top: 6px;
+				animation: 1.5s revolve6 linear forwards 2.5s;
+			}
+			
+			@keyframes revolve6 {
+				50% {
+					transform: translateX(-212.1px) translateZ(212.1px) rotateY(-45deg);
+				}
+				100% {
+					transform: translateX(-300px) translateZ(0px) rotateY(-90deg);
+				}
+			}
+			
+			.img:nth-child(4) {
+				top: 9px;
+				animation: 2s revolve5 linear forwards 2s;
+			}
+			
+			@keyframes revolve5 {
+				33.33% {
+					transform: translateX(-212.1px) translateZ(212.1px) rotateY(-45deg);
+				}
+				66.66% {
+					transform: translateX(-300px) translateZ(0px) rotateY(-90deg);
+				}
+				100% {
+					transform: translateX(-212.1px) translateZ(-212.1px) rotateY(-135deg);
+				}
+			}
+			
+			.img:nth-child(5) {
+				top: 12px;
+				animation: 2.5s revolve4 linear forwards 1.5s;
+			}
+			
+			@keyframes revolve4 {
+				25% {
+					transform: translateX(-212.1px) translateZ(212.1px) rotateY(-45deg);
+				}
+				50% {
+					transform: translateX(-300px) translateZ(0px) rotateY(-90deg);
+				}
+				75% {
+					transform: translateX(-212.1px) translateZ(-212.1px) rotateY(-135deg);
+				}
+				100% {
+					transform: translateX(0px) translateZ(-300px) rotateY(-180deg);
+				}
+			}
+			
+			.img:nth-child(6) {
+				top: 15px;
+				animation: 3s revolve3 linear forwards 1s;
+			}
+			
+			@keyframes revolve3 {
+				20% {
+					transform: translateX(-212.1px) translateZ(212.1px) rotateY(-45deg);
+				}
+				40% {
+					transform: translateX(-300px) translateZ(0px) rotateY(-90deg);
+				}
+				60% {
+					transform: translateX(-212.1px) translateZ(-212.1px) rotateY(-135deg);
+				}
+				80% {
+					transform: translateX(0px) translateZ(-300px) rotateY(-180deg);
+				}
+				100% {
+					transform: translateX(212.1px) translateZ(-212.1px) rotateY(-225deg);
+				}
+			}
+			
+			.img:nth-child(7) {
+				top: 18px;
+				animation: revolve2 3.5s linear forwards 0.5s;
+				
+				
+			}
+			
+				@keyframes revolve2 {
+				16.66% {
+					transform: translateX(-212.1px) translateZ(212.1px) rotateY(-45deg);
+				}
+				33.33% {
+					transform: translateX(-300px) translateZ(0px) rotateY(-90deg);
+				}
+				49.99% {
+					transform: translateX(-212.1px) translateZ(-212.1px) rotateY(-135deg);
+				}
+				66.66% {
+					transform: translateX(0px) translateZ(-300px) rotateY(-180deg);
+				}
+				83.33% {
+					transform: translateX(212.1px) translateZ(-212.1px) rotateY(-225deg);
+				}
+				100% {
+					transform: translateX(300px) translateZ(0px) rotateY(-270deg);
+				}
+				
+			}
+			
+			
+			.img:nth-child(8) {
+				top: 21px;
+				animation: revolve1 4s linear forwards;
+			}
+			
+			@keyframes revolve1 {
+				14.28% {
+					transform: translateX(-212.1px) translateZ(212.1px) rotateY(-45deg);
+				}
+				28.56% {
+					transform: translateX(-300px) translateZ(0px) rotateY(-90deg);
+				}
+				42.84% {
+					transform: translateX(-212.1px) translateZ(-212.1px) rotateY(-135deg);
+				}
+				57.12% {
+					transform: translateX(0px) translateZ(-300px) rotateY(-180deg);
+				}
+				71.4% {
+					transform: translateX(212.1px) translateZ(-212.1px) rotateY(-225deg);
+				}
+				84.68% {
+					transform: translateX(300px) translateZ(0px) rotateY(-270deg);
+				}
+				100% {
+					transform: translateX(212.1px) translateZ(212.1px) rotateY(-315deg);
+				}
+			}
+			
+			.img1 {
+				height: 250px;
+				width: 180px;
+				background-image: url(img/timg.jpg);
+				background-size: 100% auto;
+				border-radius: 8px;
+			}
+			
+			.img2 {
+				height: 250px;
+				width: 180px;
+				background-image: url(img/1551003192Q960-24231.jpg);
+				background-size: 100% auto;
+				border-radius: 8px;
+			}
+			
+			.img3 {
+				height: 250px;
+				width: 180px;
+				background-image: url(img/timg1.jpg);
+				background-size: 100% auto;
+				border-radius: 8px;
+			}
+			
+			.img4 {
+				height: 250px;
+				width: 180px;
+				background-image: url(img/timg2.jpg);
+				background-size: 100% auto;
+				border-radius: 8px;
+			}
+			
+			.img5 {
+				height: 250px;
+				width: 180px;
+				background-image: url(img/timg4.jpg);
+				background-size: 100% auto;
+				border-radius: 8px;
+			}
+			
+			.img6 {
+				height: 250px;
+				width: 180px;
+				background-image: url(img/timg3.jpg);
+				background-size: 100% auto;
+				border-radius: 8px;
+			}
+			
+			.img7 {
+				height: 250px;
+				width: 180px;
+				background-image: url(img/timg6.jpg);
+				background-size: auto 100%;
+				border-radius: 8px;
+				background-position: center;
+			}
+			
+			.img8 {
+				height: 250px;
+				width: 180px;
+				background-image: url(img/timg5.jpg);
+				background-size: 100% auto;
+				border-radius: 8px;
+			}
+			.return{
+				height: 30px;
+				width: 60px;
+				border-radius: 5px;
+				background-color:rgb(112, 125, 180) ;
+				color: #FFFFFF;
+				font-size: 16px;
+				position: fixed;
+				text-align: center;
+				line-height: 30px;
+				top: 2px;
+				left: 5px;
+			}
+			.return a{
+				text-decoration: none;
+				color: aliceblue;
+			}
+		</style>
+	</head>
+
+	<body>
+			<div class="return"> <a href="./demoall.html"><返回</a></div>
+
+		<div class="position">
+			<div class="box7">
+				<div class="img">
+					<div class="img1">
+
+					</div>
+				</div>
+				<div class="img">
+					<div class="img2">
+
+					</div>
+				</div>
+				<div class="img">
+					<div class="img3">
+
+					</div>
+				</div>
+				<div class=" img">
+					<div class="img4">
+
+					</div>
+				</div>
+				<div class=" img">
+					<div class="img5">
+
+					</div>
+				</div>
+				<div class="img">
+					<div class="img6">
+
+					</div>
+				</div>
+				<div class=" img">
+					<div class="img7">
+
+					</div>
+				</div>
+				<div class="img">
+					<div class="img8">
+
+					</div>
+				</div>
+			</div>
+		</div> `
+	</body>
+
+</html>

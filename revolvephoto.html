@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body,html{
+				height: 100%;
+				width: 100%;
+				display: flex;
+				align-items: center;
+			}
+			.position{
+				position: relative;
+				height: 400px;
+				width: 400px;
+				
+				margin: 400px auto;
+				perspective: 1200px;
+				perspective-origin: -5px -300px;
+			}
+			.box{
+				height: 400px;
+				width: 400px;
+				transform-style: preserve-3d;
+				animation: revolve 4s infinite;
+				cursor: pointer;
+			}
+			@keyframes revolve{
+				from{
+					transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+				}
+				to{
+					transform:rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+					
+				}
+			}
+			.box:hover .face:nth-child(1){
+				transform: translateZ(300px);
+				
+			}
+			.box:hover .face:nth-child(2){
+				transform: translateZ(-300px);
+			}
+			.box:hover .face:nth-child(3){
+				transform: rotateX(90deg) translateZ(300px);
+			}
+			.box:hover .face:nth-child(4){
+				transform: rotateX(-90deg) translateZ(300px);
+			}
+			.box:hover .face:nth-child(5){
+				transform: rotateY(90deg) translateZ(300px);
+			}
+			.box:hover .face:nth-child(6){
+				transform: rotateY(-90deg) translateZ(300px);
+			}
+			.face{
+				position: absolute;
+				top: 0px;
+				height: 400px;
+				width: 400px;
+				border-radius: 40px;
+			}
+			.face:nth-child(1){
+				background-color: rgb(139, 163, 236);
+				transform: translateZ(200px);
+			}
+			.face:nth-child(2){
+				background-color: rgb(148, 125, 148);
+				transform: translateZ(-200px);
+			}
+			.face:nth-child(3){
+				background-color: rgb(190, 179, 185);
+				transform: rotateX(90deg) translateZ(200px);
+			}
+			.face:nth-child(4){
+				background-color: palevioletred;
+				transform: rotateX(-90deg) translateZ(200px);
+			}
+			.face:nth-child(5){
+				background-color: honeydew;
+				transform: rotateY(90deg) translateZ(200px);
+			}
+			.face:nth-child(6){
+				background-color:teal;
+				transform: rotateY(-90deg) translateZ(200px);
+			}
+			.img{
+				height: 400px;
+				width: 400px;
+				border-radius: 40px;
+				background-image: url(img/timg.jpg);
+				background-size:100% auto;
+			}
+			.return{
+				height: 30px;
+				width: 60px;
+				border-radius: 5px;
+				background-color:rgb(112, 125, 180) ;
+				color: #FFFFFF;
+				font-size: 16px;
+				position: fixed;
+				text-align: center;
+				line-height: 30px;
+				top: 2px;
+				left: 5px;
+			}
+			.return a{
+				text-decoration: none;
+				color: aliceblue;
+			}
+		</style>
+	</head>
+	<body>
+			<div class="return"> <a href="./demoall.html"><返回</a></div>
+
+		<div class="position">
+			<div class="box">
+				<div class="face"></div>
+				<div class="face"></div>
+				<div class="face"></div>
+				<div class="face"></div>
+				<div class="face"></div>
+				<div class="face"></div>
+				<div class="img"></div>
+				
+			</div>
+		</div>
+	</body>
+</html>

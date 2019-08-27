@@ -11,11 +11,14 @@
   <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="./css/couter.css">
   <link rel="stylesheet" href="./css/calendar.css">
+  <link rel="stylesheet" href="./css/flex.css">
+  <link rel="stylesheet" href="./css/lbt.css">
+  <link rel="stylesheet" href="./css/load.css">
   <style>
-   
-    .wrap{
+    .wrap {
       display: none;
     }
+
     .actives {
       display: block;
     }
@@ -34,10 +37,17 @@
       <ul class="nav nav-pills nav-stacked">
         <li role="presentation" class="active list" data-value='couter'><a href="#">计算器</a></li>
         <li role="presentation" class="list" data-value="calendar"><a href="#">日历</a></li>
-        <li role="presentation" class="list" data-value="calendar"><a href="./lbt.html">轮播图</a></li>
+        <li role="presentation" class="list" data-value="flex"><a href="#">flex应用</a></li>
+        <li role="presentation" class="list" data-value="lbt"><a href="#">js轮播图</a></li>
+        <li role="presentation" class="list" data-value="load"><a href="#">加载样式</a></li>
+
         <li role="presentation" class="list" data-value="calendar"><a href="./music.html">乐符</a></li>
-        <li role="presentation" class="list" data-value="calendar"><a href="./video.html">视频播放</a></li>
+
         <li role="presentation" class="list" data-value="calendar"><a href="./wavebtn.html">按钮</a></li>
+        <li role="presentation" class="list" data-value="calendar"><a href="./revolve.html">旋转相册</a></li>
+        <li role="presentation" class="list" data-value="calendar"><a href="./revolvephoto.html">sd正方体</a></li>
+
+
 
       </ul>
     </div>
@@ -141,6 +151,76 @@
     </div>
   </div>
 
+  <div class="wrap " id="flex">
+    <div class="circlewrap">
+      <ul class="ul">
+        <li class="circle blue"></li>
+        <li class="circle blue new"></li>
+
+        <li class="circle yellow"></li>
+        <li class="circle yellow new"></li>
+
+        <li class="circle black"></li>
+        <li class="circle black new"></li>
+
+        <li class="circle green"></li>
+        <li class="circle green new"></li>
+
+        <li class="circle red"></li>
+        <li class="circle red new"></li>
+
+      </ul>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="wrap " id="lbt">
+    <div class="trap1">
+      <button class="btn5" id="xqian"> <</button> 
+      <ul class="lbtul">
+
+          <li class="list5 qian">Which</li>
+          <li class="list5">color</li>
+          <li class="list5">for</li>
+          <li class="list5">you</li>
+          <li class="list5">is</li>
+          <li class="list5">right</li>
+          <li class="list5">?</li>
+          </ul>
+          <ul class="point_list5 lbtul">
+            <li class="point active" data-index="0"></li>
+            <li class="point" data-index="1"></li>
+            <li class="point" data-index="2"></li>
+            <li class="point" data-index="3"></li>
+            <li class="point" data-index="4"></li>
+            <li class="point" data-index="5"></li>
+            <li class="point" data-index="6"></li>
+
+          </ul>
+          <button class="btn5" id="xhou">></button>
+    </div>
+
+  </div>
+
+<div  class="wrap " id="load">
+<div class="load">
+  <div class="box6">
+			
+  </div>
+  
+</div>
+
+</div>
+
+
+
+
+
+
+  </div>
 
   </div>
 
@@ -161,7 +241,7 @@
   </script>
   <script src="./js/couter.js"></script>
   <script src="./js/calender.js"></script>
-
+<script src="./js/lbt.js"></script>
 </body>
 
 </html>

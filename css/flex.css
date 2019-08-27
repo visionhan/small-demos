@@ -1,0 +1,106 @@
+.circlewrap{
+    margin-left: 100px;
+}
+.ul{
+    list-style: none;
+    position: relative;
+}
+.circle{
+    height: 12em;
+    width: 12em;
+    position: absolute;
+    z-index: 10;
+    
+}
+.circle:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: block;
+    border: 1.4em solid red;
+    border-radius: 6em;
+    box-sizing: border-box;
+    /*否则他不是一个元*/
+
+    
+}
+.circle.blue{
+    top: 0em;
+    left: 0em;
+
+    
+}
+.circle.blue.new{
+    z-index: 30;
+    
+}
+.circle.blue.new:after{
+    content: "";
+    
+    
+    border-color: blue blue transparent blue;
+    /*让border颜色变为toum*/ 
+}
+.circle.blue:after{
+    border-color: blue;
+
+    
+}
+.circle.yellow{
+    top: 5.7em;
+    left: 6.8em;
+}
+.circle.yellow:after{
+    border-color: yellow;
+    
+}
+.circle.yellow.new{
+    z-index: 25;
+    
+}
+.circle.yellow.new:after{
+    content: "";
+    border-color: yellow transparent yellow yellow;
+}
+.circle.black{
+    top: 0em;
+    left:13.6em ;
+}
+.circle.black:after{
+    border-color: black;
+    
+}
+.circle.green{
+    top: 5.7em;
+    left:20.4em ;
+    z-index: 9;
+    
+}
+.circle.green:after{
+    border-color:green ;
+    
+    
+}
+.circle.green.new{
+    z-index: 15;
+}
+.circle.green.new:after{
+    
+    border-color:transparent green green green;
+}
+.circle.red:after{
+    border-color: red;
+    
+}
+    
+.circle.red.new{
+z-index: 20;
+}
+.circle.red.new:after{
+border-color: red red transparent red;
+}
+.circle.red{
+    top:0em ;
+    left:27.2em ;
+    z-index: 8;
+}
